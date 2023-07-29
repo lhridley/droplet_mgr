@@ -1,0 +1,7 @@
+name: Digital Ocean
+description: Sets up a service for Digital Ocean.
+package: Development
+type: module
+core_version_requirement: ^10
+dependencies:
+configure: digital_ocean.settings

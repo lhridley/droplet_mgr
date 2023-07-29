@@ -1,0 +1,10 @@
+{
+    "name": "drupal/digital_ocean",
+    "type": "drupal-module",
+    "description": "Digital Ocean API integration",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "require": {
+        "toin0u/digitalocean-v2": "~2.0"
+    }
+}

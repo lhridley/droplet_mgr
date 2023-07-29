@@ -1,0 +1,66 @@
+diff --git a/config/install/digital_ocean.settings.yml b/config/install/digital_ocean.settings.yml
+index cf35071..461a9ad 100644
+--- a/config/install/digital_ocean.settings.yml
++++ b/config/install/digital_ocean.settings.yml
+@@ -1 +1 @@
+-access_key: ''
+\ No newline at end of file
++access_key: ''
+diff --git a/digital_ocean.routing.yml b/digital_ocean.routing.yml
+index d70b0d3..e7f1fcd 100644
+--- a/digital_ocean.routing.yml
++++ b/digital_ocean.routing.yml
+@@ -6,4 +6,4 @@ digital_ocean.settings:
+   options:
+     _admin_route: TRUE
+   requirements:
+-    _permission: 'administer site configuration'
+\ No newline at end of file
++    _permission: 'administer site configuration'
+diff --git a/src/DigitalOcean.php b/src/DigitalOcean.php
+index 2609710..e6c3701 100644
+--- a/src/DigitalOcean.php
++++ b/src/DigitalOcean.php
+@@ -41,4 +41,5 @@ class DigitalOcean implements DigitalOceanInterface {
+     $digitalocean = new DigitalOceanV2($adapter);
+     return $digitalocean;
+   }
+-}
+\ No newline at end of file
++
++}
+diff --git a/src/Form/SettingsForm.php b/src/Form/SettingsForm.php
+index 2a8651f..a851220 100644
+--- a/src/Form/SettingsForm.php
++++ b/src/Form/SettingsForm.php
+@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
+ /**
+  * Configure digital ocean settings.
+  */
+-class DigitalOceanSettingsForm extends ConfigFormBase {
++class SettingsForm extends ConfigFormBase {
+ 
+   /**
+    * {@inheritdoc}
+@@ -32,11 +32,11 @@ class DigitalOceanSettingsForm extends ConfigFormBase {
+   public function buildForm(array $form, FormStateInterface $form_state) {
+     $config = $this->config('digital_ocean.settings');
+ 
+-    $form['access_key'] = array(
++    $form['access_key'] = [
+       '#type' => 'textarea',
+       '#title' => $this->t('Access Key'),
+       '#default_value' => $config->get('access_key'),
+-    );
++    ];
+ 
+     return parent::buildForm($form, $form_state);
+   }
+@@ -51,4 +51,5 @@ class DigitalOceanSettingsForm extends ConfigFormBase {
+ 
+     parent::submitForm($form, $form_state);
+   }
+-}
+\ No newline at end of file
++
++}

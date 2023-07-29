@@ -1,0 +1,120 @@
+uuid: 1fde5183-2db0-490d-a06d-277997c7cd69
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - block
+    - block_content
+    - config
+    - contextual
+    - environment_indicator
+    - facets
+    - field_ui
+    - file
+    - filter
+    - image
+    - media
+    - node
+    - path
+    - pathauto
+    - redirect
+    - responsive_image
+    - search
+    - system
+    - taxonomy
+    - toolbar
+    - update
+    - views_ui
+id: administrator
+label: Administrator
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access environment indicator'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer display modes'
+  - 'administer environment indicator settings'
+  - 'administer facets'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer media'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer media types'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer permissions'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer responsive images'
+  - 'administer search'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer users'
+  - 'administer views'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create media'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any file'
+  - 'delete any media'
+  - 'delete media'
+  - 'delete own files'
+  - 'export configuration'
+  - 'import configuration'
+  - 'link to any page'
+  - 'notify of path changes'
+  - 'revert all revisions'
+  - 'search content'
+  - 'select account cancellation method'
+  - 'synchronize configuration'
+  - 'update any media'
+  - 'update media'
+  - 'use advanced search'
+  - 'use text format full_html'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view update notifications'
+  - 'view user email addresses'

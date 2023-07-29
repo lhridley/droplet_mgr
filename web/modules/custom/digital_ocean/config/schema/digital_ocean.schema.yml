@@ -1,0 +1,7 @@
+digital_ocean.settings:
+  type: config_object
+  label: 'Digital Ocean settings'
+  mapping:
+    access_key:
+      type: text
+      label: 'Digital Ocean Access Key'

@@ -1,0 +1,9 @@
+digital_ocean.settings:
+  path: 'admin/config/development/digital-ocean'
+  defaults:
+    _form: '\Drupal\digital_ocean\Form\SettingsForm'
+    _title: 'Digital Ocean Settings'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer site configuration'

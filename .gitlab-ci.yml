@@ -1,0 +1,86 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  RANCHER_PROJECT_ID: "drupalskeleton"
+
+build_image:
+  stage: build
+  except:
+    - tags
+  cache:
+    paths:
+      - .composer/cache
+  variables:
+    IMAGE_WITH_TAG: "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+  artifacts:
+    paths:
+      - web/sites/simpletest/browser_output
+    expire_in: 1 week
+    when: always
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - echo -e "section_start:`date +%s`:dependencies[collapsed=true]\r\e[0Kcomposer install"
+    - composer install --no-progress
+    - echo -e "section_end:`date +%s`:dependencies\r\e[0K"
+    - composer run-script security-checks
+    - composer run-script static-analysis
+    # This isn't part of the static analysis because the
+    # call to docker run differs in the CI environment vs. locally.
+    # Includes linting before build.
+    ## - docker run --rm --volumes-from $CONTAINER
+    ##   -w `pwd`/web/themes/custom/site_default
+    ##   -u $(id -u)
+    ##   -e HOME=$(pwd)
+    ##   registry.fruition.net/frontend/frontend-build:v1
+    ##   build-ci
+    # Remove dev dependencies for image build
+    - composer install --no-progress --no-dev -o -q
+    - echo -e "section_start:`date +%s`:build_image[collapsed=true]\r\e[0KBuild Image"
+    - docker build
+      --pull
+      -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
+    - echo -e "section_end:`date +%s`:build_image\r\e[0K"
+    # Test installability.
+    - docker run
+      --rm
+      -e DB_DRIVER=sqlite
+      -e DB_DATABASE=/tmp/drupal.sqlite
+      -e BOOTSTRAP=FALSE
+      "$IMAGE_WITH_TAG"
+      drush si -y --existing-config
+    # Reinstall dev dependencies for phpunit/other integration testing.
+    - composer install --no-progress -q
+    # Run phpunit tests. This syntax is specific to the CI environment,
+    # but DOES allow running all classes of native tests.
+    - docker run
+      --rm
+      --add-host web:127.0.0.1
+      -e BOOTSTRAP=FALSE
+      -e DOCROOT_BASE=$(pwd)
+      -e BROWSERTEST_OUTPUT_BASE_URL=$CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/raw/web
+      -w $(pwd)
+      --volumes-from $CONTAINER
+      --network none
+      "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+      config/run-phpunit.sh
+    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+
+deploy_staging:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  only:
+    - staging
+  script:
+    - fru cloud:deployment:touch --ci staging $RANCHER_PROJECT_ID web
+
+deploy_production:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  only:
+    - release
+  script:
+    - fru cloud:deployment:touch --ci prod $RANCHER_PROJECT_ID web

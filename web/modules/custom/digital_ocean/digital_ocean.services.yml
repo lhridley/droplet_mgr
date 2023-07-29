@@ -1,0 +1,4 @@
+services:
+  digital_ocean.manager:
+      class: Drupal\digital_ocean\DigitalOcean
+      arguments: ['@config.factory']
