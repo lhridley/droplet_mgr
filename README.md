@@ -1,35 +1,112 @@
-# Drupal Skeleton
+# Droplet Mgr
 
-## Troubleshooting
+## API Sections
 
-## Known opportunities for improvement
+### 1-Click Applications
 
--   Code analysis/linting (both PHP and styles)
--   Different CI for skeleton project vs. shipped CI file
--   Install from configuration after create-project.
+### Account
 
-## Local development with DDev
+yes
 
-The project contains configuration for
-[DDev](https://ddev.com/).
-See [Get Started with DDEV](https://ddev.com/get-started/).
+### Actions
 
-### Custom DDev commands
+yes
 
-For a list of all `ddev` commands, run `ddev help`.
-For details on a specific command, run `ddev help <command>`.
+### Apps
 
-- `ddev install`
-- `ddev theme`
 
-### Troubleshooting DDev
+### Billing
 
-If you have other sites running locally, then you may get this message when
-running `ddev start`:
+### Block Storage
 
-> Failed to start skeleton: Unable to listen on required ports, port 443 is already in use, ...
+### CDN Endpoints
 
-For example, if you are running another site using Lando, then shut it down with
-`lando poseroff` and then try `ddev start` again.
+yes
 
-&copy; codeMentality LLC.
+### Certificates
+
+yes
+
+### Container REgistry
+
+### Databases
+
+yes
+
+### Domain Records
+
+yes
+
+### Domains
+
+yes
+
+### Droplet Actions
+
+### Droplets
+
+yes
+
+### Firewalls
+
+yes
+
+### Floating IP Actions
+
+### Floating IPs
+
+yes
+
+### Functions
+
+### Image Actions
+
+### Images
+
+yes
+
+### Kubernetes
+
+### Load Balancers
+
+yes
+
+### Monitoring
+
+yes
+
+### Project Resources
+
+yes
+
+### Projects
+
+### Regions
+
+yes
+
+### Reserved IP Actions
+
+yes
+
+### Sizes
+
+yes
+
+### Snapshots
+
+yes
+
+### SSH Keys
+
+keys ?
+
+### Tags
+
+yes
+
+### Uptime
+
+### VPCs
+
+yes

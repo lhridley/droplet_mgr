@@ -781,14 +781,15 @@ switch ($dbDriver) {
     break;
 }
 
-$config['digital_ocean.settings']['access_key'] = getenv('DIGITAL_OCEAN_API_KEY');
-
-if (file_exists(__DIR__ . '/settings.local.php') && (getenv('ENVIRONMENT') === 'DEV')) {
-  include __DIR__ . '/settings.local.php';
-}
-
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
+}
+
+// Local ddev settings
+$localddev_settings = dirname(__FILE__) . '/settings.local.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($localddev_settings)) {
+  require $localddev_settings;
+  $config['digital_ocean.settings']['access_key'] = getenv('DIGITAL_OCEAN_API_KEY');
 }

@@ -24,13 +24,14 @@
         "drupal/facets": "^2.0",
         "drupal/pathauto": "^1",
         "drupal/redirect": "^1",
-        "drush/drush": "^11||^12",
+        "drush/drush": "^11",
         "oomphinc/composer-installers-extender": "^2",
         "toin0u/digitalocean-v2": "^4.7"
     },
     "require-dev": {
         "ext-json": "*",
         "drupal/core-dev": "^10@alpha",
+        "drupal/devel": "^5.1",
         "mglaman/phpstan-drupal": "^1",
         "phpstan/extension-installer": "^1.0"
     },
@@ -180,6 +181,10 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches": {}
+        "patches": {
+            "toin0u/digitalocean-v2": {
+                "Create a Billing Entity": "https://patch-diff.githubusercontent.com/raw/DigitalOceanPHP/Client/pull/320.diff"
+            }
+        }
     }
 }

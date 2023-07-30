@@ -1,0 +1,5 @@
+digital_ocean.account_info:
+  title: 'Digital Ocean Management Console'
+  description: 'Digital Ocean Management Console'
+  route_name: digital_ocean.account_info
+  parent: 'system.admin_config_development'

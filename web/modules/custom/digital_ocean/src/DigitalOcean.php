@@ -2,8 +2,7 @@
 
 namespace Drupal\digital_ocean;
 
-use DigitalOceanV2\Adapter\BuzzAdapter;
-use DigitalOceanV2\DigitalOceanV2;
+use DigitalOceanV2\Client;
 use Drupal\Core\Config\ConfigFactoryInterface;
 
 /**
@@ -25,20 +24,29 @@ class DigitalOcean implements DigitalOceanInterface {
    *   The config factory.
    */
   public function __construct(ConfigFactoryInterface $config_factory) {
-    $this->config = $config_factory->get('digital_ocean.settings');
+    $this->config = $config_factory->get('digital_ocean.admin_settings');
   }
 
   /**
    * {@inheritdoc}
    */
   public function getHandler() {
-    $key = $this->config->get('access_key');
+    $key = $this->getAccessKey();
     if (empty($key)) {
       // THROW ERROR HERE.
       return NULL;
     }
-    $adapter = new BuzzAdapter($key);
-    $digitalocean = new DigitalOceanV2($adapter);
-    return $digitalocean;
+    $client = new Client();
+    $client->authenticate($key);
+    return $client;
+  }
+
+  /**
+   * Returns access key.
+   *
+   * return string;
+   */
+  public function getAccessKey() {
+    return $this->config->get('access_key');
   }
 }

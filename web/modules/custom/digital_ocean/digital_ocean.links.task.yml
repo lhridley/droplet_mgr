@@ -1,0 +1,23 @@
+digital_ocean.settings.tab:
+  title: 'Settings'
+  route_name: digital_ocean.settings
+  base_route: digital_ocean.account_info
+  weight: 500
+
+digital_ocean.account_info.tab:
+  title: 'Account'
+  route_name: digital_ocean.account_info
+  base_route: digital_ocean.account_info
+  weight: 1
+
+digital_ocean.projects_info.tab:
+  title: 'Projects'
+  route_name: digital_ocean.projects_info
+  base_route: digital_ocean.account_info
+  weight: 5
+
+digital_ocean.droplet_info.tab:
+  title: 'Droplets'
+  route_name: digital_ocean.droplet_info
+  base_route: digital_ocean.account_info
+  weight: 10

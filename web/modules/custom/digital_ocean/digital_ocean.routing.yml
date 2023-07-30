@@ -1,9 +1,32 @@
-digital_ocean.settings:
-  path: 'admin/config/development/digital-ocean'
+digital_ocean.account_info:
+  path: '/admin/config/development/digital-ocean/account-info'
   defaults:
-    _form: '\Drupal\digital_ocean\Form\SettingsForm'
-    _title: 'Digital Ocean Settings'
-  options:
-    _admin_route: TRUE
+    _controller: '\Drupal\digital_ocean\Controller\AccountController::content'
+    _title: "Digital Ocean Account Information"
   requirements:
     _permission: 'administer site configuration'
+
+digital_ocean.droplet_info:
+  path: '/admin/config/development/digital-ocean/droplets'
+  defaults:
+    _controller: '\Drupal\digital_ocean\Controller\DropletController::content'
+    _title: "Digital Ocean Droplets"
+  requirements:
+    _permission: 'administer site configuration'
+
+digital_ocean.projects_info:
+  path: '/admin/config/development/digital-ocean/projects'
+  defaults:
+    _controller: '\Drupal\digital_ocean\Controller\ProjectsController::content'
+    _title: "Digital Ocean Projects"
+  requirements:
+    _permission: 'administer site configuration'
+
+digital_ocean.settings:
+  path: '/admin/config/development/digital-ocean'
+  defaults:
+    _form: '\Drupal\digital_ocean\Form\SettingsForm'
+    _title: 'Digital Ocean Management Console'
+  requirements:
+    _permission: 'administer site configuration'
+

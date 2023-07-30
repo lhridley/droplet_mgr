@@ -1,0 +1,363 @@
+array(25) {
+  ["id"]=>
+  int(333977092)
+  ["name"]=>
+  string(37) "ubuntu-s-2vcpu-2gb-sfo3-01-playground"
+  ["memory"]=>
+  int(2048)
+  ["vcpus"]=>
+  int(2)
+  ["disk"]=>
+  int(60)
+  ["region"]=>
+  object(DigitalOceanV2\Entity\Region)#49 (5) {
+    ["slug"]=>
+    string(4) "sfo3"
+    ["name"]=>
+    string(15) "San Francisco 3"
+    ["available"]=>
+    bool(true)
+    ["sizes"]=>
+    array(83) {
+      [0]=>
+      string(18) "s-1vcpu-512mb-10gb"
+      [1]=>
+      string(11) "s-1vcpu-1gb"
+      [2]=>
+      string(15) "s-1vcpu-1gb-amd"
+      [3]=>
+      string(17) "s-1vcpu-1gb-intel"
+      [4]=>
+      string(11) "s-1vcpu-2gb"
+      [5]=>
+      string(15) "s-1vcpu-2gb-amd"
+      [6]=>
+      string(17) "s-1vcpu-2gb-intel"
+      [7]=>
+      string(11) "s-2vcpu-2gb"
+      [8]=>
+      string(15) "s-2vcpu-2gb-amd"
+      [9]=>
+      string(17) "s-2vcpu-2gb-intel"
+      [10]=>
+      string(11) "s-2vcpu-4gb"
+      [11]=>
+      string(15) "s-2vcpu-4gb-amd"
+      [12]=>
+      string(17) "s-2vcpu-4gb-intel"
+      [13]=>
+      string(3) "c-2"
+      [14]=>
+      string(12) "c2-2vcpu-4gb"
+      [15]=>
+      string(11) "s-4vcpu-8gb"
+      [16]=>
+      string(15) "s-4vcpu-8gb-amd"
+      [17]=>
+      string(17) "s-4vcpu-8gb-intel"
+      [18]=>
+      string(11) "g-2vcpu-8gb"
+      [19]=>
+      string(12) "gd-2vcpu-8gb"
+      [20]=>
+      string(12) "m-2vcpu-16gb"
+      [21]=>
+      string(3) "c-4"
+      [22]=>
+      string(12) "c2-4vcpu-8gb"
+      [23]=>
+      string(12) "s-8vcpu-16gb"
+      [24]=>
+      string(13) "m3-2vcpu-16gb"
+      [25]=>
+      string(9) "c-4-intel"
+      [26]=>
+      string(16) "s-8vcpu-16gb-amd"
+      [27]=>
+      string(18) "s-8vcpu-16gb-intel"
+      [28]=>
+      string(18) "c2-4vcpu-8gb-intel"
+      [29]=>
+      string(12) "g-4vcpu-16gb"
+      [30]=>
+      string(13) "so-2vcpu-16gb"
+      [31]=>
+      string(13) "m6-2vcpu-16gb"
+      [32]=>
+      string(13) "gd-4vcpu-16gb"
+      [33]=>
+      string(16) "so1_5-2vcpu-16gb"
+      [34]=>
+      string(12) "m-4vcpu-32gb"
+      [35]=>
+      string(3) "c-8"
+      [36]=>
+      string(13) "c2-8vcpu-16gb"
+      [37]=>
+      string(13) "m3-4vcpu-32gb"
+      [38]=>
+      string(9) "c-8-intel"
+      [39]=>
+      string(19) "c2-8vcpu-16gb-intel"
+      [40]=>
+      string(12) "g-8vcpu-32gb"
+      [41]=>
+      string(13) "so-4vcpu-32gb"
+      [42]=>
+      string(13) "m6-4vcpu-32gb"
+      [43]=>
+      string(13) "gd-8vcpu-32gb"
+      [44]=>
+      string(16) "so1_5-4vcpu-32gb"
+      [45]=>
+      string(12) "m-8vcpu-64gb"
+      [46]=>
+      string(4) "c-16"
+      [47]=>
+      string(14) "c2-16vcpu-32gb"
+      [48]=>
+      string(13) "m3-8vcpu-64gb"
+      [49]=>
+      string(10) "c-16-intel"
+      [50]=>
+      string(20) "c2-16vcpu-32gb-intel"
+      [51]=>
+      string(13) "g-16vcpu-64gb"
+      [52]=>
+      string(13) "so-8vcpu-64gb"
+      [53]=>
+      string(13) "m6-8vcpu-64gb"
+      [54]=>
+      string(14) "gd-16vcpu-64gb"
+      [55]=>
+      string(16) "so1_5-8vcpu-64gb"
+      [56]=>
+      string(14) "m-16vcpu-128gb"
+      [57]=>
+      string(4) "c-32"
+      [58]=>
+      string(14) "c2-32vcpu-64gb"
+      [59]=>
+      string(15) "m3-16vcpu-128gb"
+      [60]=>
+      string(10) "c-32-intel"
+      [61]=>
+      string(20) "c2-32vcpu-64gb-intel"
+      [62]=>
+      string(4) "c-48"
+      [63]=>
+      string(14) "m-24vcpu-192gb"
+      [64]=>
+      string(14) "g-32vcpu-128gb"
+      [65]=>
+      string(15) "so-16vcpu-128gb"
+      [66]=>
+      string(15) "m6-16vcpu-128gb"
+      [67]=>
+      string(15) "gd-32vcpu-128gb"
+      [68]=>
+      string(14) "c2-48vcpu-96gb"
+      [69]=>
+      string(15) "m3-24vcpu-192gb"
+      [70]=>
+      string(14) "g-40vcpu-160gb"
+      [71]=>
+      string(18) "so1_5-16vcpu-128gb"
+      [72]=>
+      string(10) "c-48-intel"
+      [73]=>
+      string(14) "m-32vcpu-256gb"
+      [74]=>
+      string(15) "gd-40vcpu-160gb"
+      [75]=>
+      string(20) "c2-48vcpu-96gb-intel"
+      [76]=>
+      string(15) "so-24vcpu-192gb"
+      [77]=>
+      string(15) "m6-24vcpu-192gb"
+      [78]=>
+      string(15) "m3-32vcpu-256gb"
+      [79]=>
+      string(18) "so1_5-24vcpu-192gb"
+      [80]=>
+      string(15) "so-32vcpu-256gb"
+      [81]=>
+      string(15) "m6-32vcpu-256gb"
+      [82]=>
+      string(18) "so1_5-32vcpu-256gb"
+    }
+    ["features"]=>
+    array(6) {
+      [0]=>
+      string(7) "backups"
+      [1]=>
+      string(4) "ipv6"
+      [2]=>
+      string(8) "metadata"
+      [3]=>
+      string(13) "install_agent"
+      [4]=>
+      string(7) "storage"
+      [5]=>
+      string(14) "image_transfer"
+    }
+  }
+  ["image"]=>
+  object(DigitalOceanV2\Entity\Image)#48 (14) {
+    ["id"]=>
+    int(118857366)
+    ["name"]=>
+    string(15) "22.04 (LTS) x64"
+    ["type"]=>
+    string(4) "base"
+    ["distribution"]=>
+    string(6) "Ubuntu"
+    ["slug"]=>
+    NULL
+    ["minDiskSize"]=>
+    int(7)
+    ["sizeGigabytes"]=>
+    float(0.69)
+    ["createdAt"]=>
+    string(20) "2022-10-14T20:34:31Z"
+    ["public"]=>
+    bool(false)
+    ["regions"]=>
+    array(0) {
+    }
+    ["description"]=>
+    string(22) "Ubuntu 22.04 (LTS) x64"
+    ["tags"]=>
+    array(0) {
+    }
+    ["status"]=>
+    string(7) "retired"
+    ["error_message"]=>
+    NULL
+  }
+  ["kernel"]=>
+  NULL
+  ["size"]=>
+  object(DigitalOceanV2\Entity\Size)#47 (10) {
+    ["slug"]=>
+    string(11) "s-2vcpu-2gb"
+    ["available"]=>
+    bool(true)
+    ["memory"]=>
+    int(2048)
+    ["vcpus"]=>
+    int(2)
+    ["disk"]=>
+    int(60)
+    ["transfer"]=>
+    float(3)
+    ["priceMonthly"]=>
+    float(18)
+    ["priceHourly"]=>
+    float(0.02679)
+    ["regions"]=>
+    array(11) {
+      [0]=>
+      string(4) "ams3"
+      [1]=>
+      string(4) "blr1"
+      [2]=>
+      string(4) "fra1"
+      [3]=>
+      string(4) "lon1"
+      [4]=>
+      string(4) "nyc1"
+      [5]=>
+      string(4) "nyc3"
+      [6]=>
+      string(4) "sfo2"
+      [7]=>
+      string(4) "sfo3"
+      [8]=>
+      string(4) "sgp1"
+      [9]=>
+      string(4) "syd1"
+      [10]=>
+      string(4) "tor1"
+    }
+    ["description"]=>
+    string(5) "Basic"
+  }
+  ["sizeSlug"]=>
+  string(11) "s-2vcpu-2gb"
+  ["locked"]=>
+  bool(false)
+  ["createdAt"]=>
+  string(20) "2023-01-02T19:18:01Z"
+  ["status"]=>
+  string(6) "active"
+  ["tags"]=>
+  array(0) {
+  }
+  ["networks"]=>
+  array(2) {
+    [0]=>
+    object(DigitalOceanV2\Entity\Network)#50 (6) {
+      ["ipAddress"]=>
+      string(14) "64.227.111.209"
+      ["gateway"]=>
+      string(11) "64.227.96.1"
+      ["type"]=>
+      string(6) "public"
+      ["version"]=>
+      int(4)
+      ["cidr"]=>
+      NULL
+      ["netmask"]=>
+      string(13) "255.255.240.0"
+    }
+    [1]=>
+    object(DigitalOceanV2\Entity\Network)#57 (6) {
+      ["ipAddress"]=>
+      string(10) "10.124.0.2"
+      ["gateway"]=>
+      string(10) "10.124.0.1"
+      ["type"]=>
+      string(7) "private"
+      ["version"]=>
+      int(4)
+      ["cidr"]=>
+      NULL
+      ["netmask"]=>
+      string(13) "255.255.240.0"
+    }
+  }
+  ["backupIds"]=>
+  array(0) {
+  }
+  ["volumeIds"]=>
+  array(0) {
+  }
+  ["snapshotIds"]=>
+  array(0) {
+  }
+  ["features"]=>
+  array(2) {
+    [0]=>
+    string(13) "droplet_agent"
+    [1]=>
+    string(18) "private_networking"
+  }
+  ["backupsEnabled"]=>
+  bool(false)
+  ["privateNetworkingEnabled"]=>
+  bool(true)
+  ["ipv6Enabled"]=>
+  bool(false)
+  ["virtIOEnabled"]=>
+  bool(false)
+  ["nextBackupWindow"]=>
+  object(DigitalOceanV2\Entity\NextBackupWindow)#46 (2) {
+    ["start"]=>
+    NULL
+    ["end"]=>
+    NULL
+  }
+  ["vpcUuid"]=>
+  string(36) "c60706d3-201b-4d82-b43e-4b2fd39e9664"
+}

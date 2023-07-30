@@ -8,13 +8,14 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  coi: 0
   config: 0
+  config_override_core_fields: 0
   contextual: 0
   ctools_views: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
-  digital_ocean: 0
   dynamic_page_cache: 0
   editor: 0
   environment_indicator: 0

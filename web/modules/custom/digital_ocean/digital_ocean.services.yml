@@ -1,4 +1,4 @@
 services:
-  digital_ocean.manager:
+  digital_ocean.client:
       class: Drupal\digital_ocean\DigitalOcean
       arguments: ['@config.factory']

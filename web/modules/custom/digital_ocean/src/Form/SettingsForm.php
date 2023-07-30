@@ -30,12 +30,12 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('digital_ocean.settings');
-
+    $config = $this->config('digital_ocean.admin_settings');
     $form['access_key'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Access Key'),
       '#default_value' => $config->get('access_key'),
+      '#description' => $this->t('Enter your Digital Ocean API key here.')
     ];
 
     return parent::buildForm($form, $form_state);
@@ -45,7 +45,7 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->configFactory->getEditable('digital_ocean.settings')
+    $this->configFactory->getEditable('digital_ocean.admin_settings')
       ->set('access_key', $form_state->getValue('access_key'))
       ->save();
 
